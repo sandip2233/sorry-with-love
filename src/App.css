@@ -1,0 +1,198 @@
+.app {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================
+   Floating Hearts Background
+========================= */
+
+.hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hearts span {
+  position: absolute;
+  bottom: -100px;
+  font-size: 24px;
+  opacity: 0.7;
+  animation: floatHeart 18s linear infinite;
+}
+
+/* Individual Positions */
+
+.hearts span:nth-child(1) {
+  left: 5%;
+  animation-duration: 12s;
+  font-size: 24px;
+}
+
+.hearts span:nth-child(2) {
+  left: 18%;
+  animation-duration: 18s;
+  font-size: 30px;
+}
+
+.hearts span:nth-child(3) {
+  left: 32%;
+  animation-duration: 15s;
+  font-size: 20px;
+}
+
+.hearts span:nth-child(4) {
+  left: 45%;
+  animation-duration: 20s;
+  font-size: 34px;
+}
+
+.hearts span:nth-child(5) {
+  left: 60%;
+  animation-duration: 14s;
+  font-size: 22px;
+}
+
+.hearts span:nth-child(6) {
+  left: 74%;
+  animation-duration: 17s;
+  font-size: 28px;
+}
+
+.hearts span:nth-child(7) {
+  left: 86%;
+  animation-duration: 13s;
+  font-size: 24px;
+}
+
+.hearts span:nth-child(8) {
+  left: 95%;
+  animation-duration: 19s;
+  font-size: 30px;
+}
+
+/* Animation */
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-50vh) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   Hero Card
+========================= */
+
+.card {
+  max-width: 850px;
+  margin: auto;
+}
+
+/* =========================
+   Hero Heading
+========================= */
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.title {
+  color: white;
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* =========================
+   Paragraph
+========================= */
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* =========================
+   Hover Effects
+========================= */
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.35s;
+}
+
+/* =========================
+   Button
+========================= */
+
+.primary-btn:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   Footer Text
+========================= */
+
+.footer-text {
+  text-align: center;
+  margin-top: 25px;
+  opacity: 0.7;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .card {
+    padding: 30px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hearts span {
+    font-size: 18px !important;
+  }
+}
