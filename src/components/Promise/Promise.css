@@ -1,4 +1,63 @@
-.promise-component {
-  padding: 2rem;
+.promise-section {
+  padding: 80px 20px;
+}
+
+.promise-heading {
   text-align: center;
+  margin-bottom: 34px;
+}
+
+.section-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff3f6;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.promise-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.3rem;
+  color: white;
+}
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.promise-card {
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.promise-icon {
+  display: inline-block;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.promise-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 768px) {
+  .promise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promise-title {
+    font-size: 1.9rem;
+  }
 }

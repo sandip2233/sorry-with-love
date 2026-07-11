@@ -1,11 +1,33 @@
-import './FloatingHearts.css';
+import "./FloatingHearts.css";
 
-const FloatingHearts = () => {
+const hearts = [
+  "❤️",
+  "💖",
+  "💕",
+  "💗",
+  "💓",
+  "💞",
+  "💘",
+  "💝",
+  "❤️",
+  "💖",
+  "💕",
+  "💗",
+];
+
+function FloatingHearts() {
   return (
-    <section className="floating-hearts" aria-label="Floating hearts component">
-      <h2>FloatingHearts</h2>
-    </section>
+    <div className="floating-hearts">
+      {hearts.map((heart, index) => (
+        <span
+          key={index}
+          className={`heart heart-${index + 1}`}
+        >
+          {heart}
+        </span>
+      ))}
+    </div>
   );
-};
+}
 
 export default FloatingHearts;

@@ -1,4 +1,63 @@
-.timeline-component {
-  padding: 2rem;
+.timeline-section {
+  padding: 80px 20px;
+}
+
+.timeline-heading {
   text-align: center;
+  margin-bottom: 34px;
+}
+
+.timeline-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.2rem;
+  color: white;
+}
+
+.timeline-list {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 16px 0 16px 28px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 1px;
+  top: 22px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+.timeline-item h3 {
+  color: white;
+  margin-bottom: 6px;
+}
+
+.timeline-item p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .timeline-title {
+    font-size: 1.8rem;
+  }
 }
