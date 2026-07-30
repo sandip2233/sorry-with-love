@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap");
+
 /* =====================================
    Hero Section
 ===================================== */
@@ -65,24 +68,314 @@
   margin-bottom: 40px;
 }
 
-.hero-button {
-  padding: 16px 40px;
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-button,
+.hero-secondary-button {
+  padding: 16px 32px;
   border-radius: 50px;
-  background: linear-gradient(45deg, #ff4d6d, #ff758c);
-  color: white;
   font-size: 1rem;
   font-weight: 600;
   transition: 0.35s;
+}
+
+.hero-button {
+  background: linear-gradient(45deg, #ff4d6d, #ff758c);
+  color: white;
   box-shadow: 0 15px 30px rgba(255, 77, 109, 0.35);
 }
 
-.hero-button:hover {
+.hero-secondary-button {
+  background: linear-gradient(135deg, #7c1d48 0%, #c23b6b 50%, #ff7aa2 100%);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 12px 28px rgba(124, 29, 72, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.hero-button:hover,
+.hero-secondary-button:hover {
   transform: translateY(-5px);
+}
+
+.hero-button:hover {
   box-shadow: 0 20px 40px rgba(255, 77, 109, 0.45);
 }
 
-.hero-button:active {
+.hero-secondary-button:hover {
+  box-shadow: 0 16px 34px rgba(124, 29, 72, 0.45);
+}
+
+.hero-button:active,
+.hero-secondary-button:active {
   transform: scale(0.97);
+}
+
+.agreement-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 20, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.agreement-modal {
+  position: relative;
+  width: min(980px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #fff5f7 0%, #ffe4ea 100%);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  color: #7c1d48;
+  font-family: "Noto Serif", "Times New Roman", serif;
+}
+
+.agreement-close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #7c1d48;
+  font-size: 1.7rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.agreement-paper {
+  background: #fdf8ea;
+  width: 100%;
+  padding: 0 0 45px;
+  box-shadow: 0 0 0 1px #cbbf9d, 0 8px 30px rgba(0, 0, 0, 0.18);
+  position: relative;
+  border: 6px double #b9832f;
+  margin-top: 8px;
+  font-family: "Noto Serif", "Times New Roman", serif;
+}
+
+.agreement-paper::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #c9b467;
+  pointer-events: none;
+}
+
+.agreement-letterhead-wrap {
+  position: relative;
+  border-bottom: 4px solid #1c8f86;
+}
+
+.agreement-letterhead-wrap svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.agreement-state-strip {
+  background: #fdf8ea;
+  border-bottom: 1px solid #1c8f86;
+  padding: 5px 40px;
+  font-size: 11px;
+  color: #1c8f86;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.5px;
+  gap: 12px;
+}
+
+.agreement-cert-strip {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10.5px;
+  color: #4a4a4a;
+  padding: 6px 40px;
+  border-bottom: 1px solid #d8cba0;
+  background: #f7f0d9;
+  gap: 12px;
+}
+
+.agreement-cert-strip b {
+  color: #7a1f1f;
+}
+
+.agreement-body-inner {
+  padding: 30px 60px 0;
+}
+
+.agreement-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 10px 0 8px;
+  letter-spacing: 1px;
+  color: #3a2a12;
+}
+
+.agreement-subtitle-line {
+  text-align: center;
+  font-size: 13px;
+  color: #7a1f1f;
+  font-style: italic;
+  margin-bottom: 26px;
+}
+
+.agreement-content p,
+.agreement-content li {
+  font-size: 15.5px;
+  line-height: 1.9;
+  color: #2c2110;
+}
+
+.agreement-content p {
+  margin: 0 0 16px;
+  text-align: justify;
+}
+
+.agreement-content b {
+  color: #4a2f0d;
+}
+
+.agreement-parties {
+  background: #f8f0d8;
+  border-left: 3px solid #a3721f;
+  padding: 14px 18px;
+  margin: 20px 0 26px;
+  font-size: 14.5px;
+  line-height: 1.8;
+}
+
+.agreement-promises {
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.95;
+  color: #2c2110;
+}
+
+.agreement-promises li {
+  margin-bottom: 12px;
+}
+
+.agreement-witness-note {
+  margin-top: 26px;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.agreement-seal {
+  position: absolute;
+  right: 40px;
+  bottom: 140px;
+  width: 120px;
+  height: 120px;
+  border: 3px solid #a33;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #a33;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transform: rotate(-14deg);
+  opacity: 0.7;
+  line-height: 1.3;
+  padding: 6px;
+}
+
+.agreement-date-place {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 14px;
+  gap: 12px;
+}
+
+.agreement-signatures {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 65px;
+  padding-top: 10px;
+  gap: 24px;
+}
+
+.agreement-sig-block {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agreement-signature-image {
+  display: block;
+  max-width: 180px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  margin: 0 auto 10px;
+  object-fit: contain;
+}
+
+.agreement-sig-line {
+  width: 100%;
+  max-width: 220px;
+  border-top: 1.5px solid #333;
+  margin-bottom: 6px;
+  padding-top: 6px;
+  font-size: 13px;
+}
+
+.agreement-sig-role {
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 1px;
+  min-height: 14px;
+}
+
+.agreement-footer-note {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 11px;
+  color: #8a7a55;
+  letter-spacing: 1px;
+  border-top: 1px dashed #c9b98a;
+  padding-top: 12px;
+}
+
+.agreement-download-button {
+  display: block;
+  margin: 24px auto 0;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ff4d6d, #ff758c);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(255, 77, 109, 0.25);
+}
+
+.agreement-download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(255, 77, 109, 0.35);
 }
 
 @media (max-width: 992px) {
@@ -132,8 +425,78 @@
     padding: 8px 15px;
   }
 
-  .hero-button {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-button,
+  .hero-secondary-button {
     width: 100%;
     padding: 15px;
+  }
+
+  .agreement-modal {
+    padding: 18px;
+  }
+
+  .agreement-body-inner {
+    padding: 20px 18px 0;
+  }
+
+  .agreement-download-button {
+    width: 100%;
+  }
+
+  .agreement-state-strip,
+  .agreement-cert-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .agreement-date-place,
+  .agreement-signatures {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .agreement-sig-block {
+    width: 100%;
+  }
+
+  .agreement-seal {
+    position: static;
+    margin: 20px auto 0;
+    transform: rotate(-8deg);
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .agreement-modal-overlay {
+    position: static;
+    background: white;
+    padding: 0;
+  }
+
+  .agreement-modal {
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    padding: 0;
+    background: white;
+  }
+
+  .agreement-close-button,
+  .agreement-download-button {
+    display: none !important;
+  }
+
+  .agreement-paper {
+    box-shadow: none;
+    border: 6px double #b9832f;
   }
 }
